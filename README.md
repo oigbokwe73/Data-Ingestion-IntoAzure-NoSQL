@@ -30,31 +30,6 @@ Click on **"Container"**
 ![image](https://user-images.githubusercontent.com/15838780/147963170-1a2f2a64-7ba2-44ce-9f5d-30d490529711.png)
 Upload the selected files from the "**Config**" folder in your project
 
-
-## Upload CSV File
-
-|Key|Value|Comments|
-|:----|:----|:----|
-|ReadCsvAsStream|Yes| Required to parse the csv file while uploading|
-|messageformat|application/json OR application/xml| required|
-|FolderName||OPTIONAL:This is required for additonal XSL transformation |
-|FileName||OPTIONAL:This is required for additonal XSL transformation |
-|TableName|<AZURE TABLE NAME>| REQUIRED Create table add records|
-|StorageAccount|<STORAGE ACCOUNT KEY>| Name of the  storage account key in AppSettings.|
-
-
-
-## Search Record
-
-|Key|Value|Comments|
-|:----|:----|:----|
-|SimpleTableSearch|Yes| Indicates the method in the process to use the API|
-|PartitionKey|<PROPERTY NAME >|OPTIONAL : Identity the  Field/Key in the JSON payload as a Partition Key|
-|QueryField|<SEARCH PROPERTY NAME>|Provide the search property name to be used in the search
-|DefaultResult| <CUSTOM MESSAGE> | OPTIONAL :  No  results return then a default message
-|TableName|<AZURE TABLE NAME>| Create table add records
-|StorageAccount|<STORAGE ACCOUNT KEY>| Name of the  storage account key in AppSettings.|
-  
   
   ## Products
 
