@@ -18,7 +18,7 @@ namespace DataIngestionIntoAzureNoSQL
         private NameValueCollection nvc = new NameValueCollection();
         [FunctionName("uploadfile")]
         public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)]
-            HttpRequest req, ILogger log)F
+            HttpRequest req, ILogger log)
         {
             _req = req;
 
