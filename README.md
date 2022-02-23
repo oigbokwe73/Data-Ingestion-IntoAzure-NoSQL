@@ -1,4 +1,4 @@
-# Data-IngestionI-ntoAzure-NoSQL
+# Data-Ingestion IntoAzure-NoSQL
 Data Ingestion, Custom Data Transformation on read
 
 ## Appplication Setting 
@@ -17,8 +17,9 @@ Data Ingestion, Custom Data Transformation on read
 
 |FileName|Description|
 |:----|:----|
-|43EFE991E8614CFB9EDECF1B0FDED37B.json| Upload CSV file|
-|43EFE991E8614CFB9EDECF1B0FDED37C.json| Search Records config File.|
+|43EFE991E8614CFB9EDECF1B0FDED37A.json| Upload CSV file|
+|43EFE991E8614CFB9EDECF1B0FDED37B.json| Send JSON Post Request into Azure NOSQL Database.|
+|43EFE991E8614CFB9EDECF1B0FDED37C.json| Search NOSQL Database for result set. Custom Mapping to result set.|
 
 ## Upload Configuration to Storage
 Go to created storage Account.. Click On "Blob Service" 
