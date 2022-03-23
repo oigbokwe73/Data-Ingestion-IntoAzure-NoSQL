@@ -1,5 +1,8 @@
 # Data-Ingestion IntoAzure-NoSQL
-Data Ingestion, Custom Data Transformation on read
+
+## Architecture Diagram 
+![image](https://user-images.githubusercontent.com/15838780/159802918-0cdabf47-23f7-4468-b507-f01cffac9375.png)
+
 
 ## Appplication Setting 
 
