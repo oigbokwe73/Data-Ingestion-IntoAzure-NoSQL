@@ -1,5 +1,8 @@
 # Data-Ingestion IntoAzure-NoSQL
-Data Ingestion, Custom Data Transformation on read
+
+## Architecture Diagram 
+![image](https://user-images.githubusercontent.com/15838780/159803055-8ee721bf-ca24-4bfb-92e9-aa8c4d51af20.png)
+
 
 ## Appplication Setting 
 
@@ -20,6 +23,7 @@ Data Ingestion, Custom Data Transformation on read
 |43EFE991E8614CFB9EDECF1B0FDED37A.json| Upload CSV file|
 |43EFE991E8614CFB9EDECF1B0FDED37B.json| Send JSON Post Request into Azure NOSQL Database.|
 |43EFE991E8614CFB9EDECF1B0FDED37C.json| Search NOSQL Database for result set. Custom Mapping to result set.|
+|43EFE991E8614CFB9EDECF1B0FDED37D.json| Upload and shard into batch sizes.|
 |43EFE991E8614CFB9EDECF1B0FDED37E.json| Event triggered when file is written to container|
 
 
