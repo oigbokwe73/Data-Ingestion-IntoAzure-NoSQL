@@ -11,7 +11,7 @@ namespace DataIngestionIntoAzureNoSQL
 {
     public static class FileTrigger
     {
-        [FunctionName("EventParserTrigger")]
+        [FunctionName("BlobTrigger")]
         public static void Run([BlobTrigger("processed/{name}", Connection = "AzureWebJobsStorage")] Stream myBlob, string name, ILogger log)
         {
             string ApiKeyName = "x-api-key";
