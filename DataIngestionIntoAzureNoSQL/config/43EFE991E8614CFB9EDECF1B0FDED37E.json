@@ -73,7 +73,39 @@
       ]
     },
     {
-      "Key": "Write-To-Storage",
+      "Key": "Write-Json-File-To-Storage",
+      "Type": "Xenhey.BPM.Core.Processes.BlobStorageWriteProcess",
+      "Async": "false",
+      "IsEnable": "false",
+      "DataFlowProcessParameters": [
+        {
+          "Key": "WriteToStorage",
+          "Value": "yes"
+        },
+        {
+          "Key": "BlobStorageConnectionString",
+          "Value": "AzureWebJobsStorage"
+        },
+        {
+          "Key": "container",
+          "Value": "BatchedFiles"
+        },
+        {
+          "Key": "folderName",
+          "Value": "JsonFiles"
+        },
+        {
+          "Key": "ContentType",
+          "Value": "application/json"
+        },
+        {
+          "Key": "extension",
+          "Value": "json"
+        }
+      ]
+    },
+    {
+      "Key": "Write-To-Table-Storage",
       "Type": "Xenhey.BPM.Core.Processes.AzureTableStorageProcess",
       "Async": "false",
       "IsEnable": "true",
