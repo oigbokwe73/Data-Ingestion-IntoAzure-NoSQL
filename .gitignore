@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/DataIngestionIntoAzureNoSQL/.vscode/tasks.json
+/DataIngestionIntoAzureNoSQL/.vscode/settings.json
+/DataIngestionIntoAzureNoSQL/.vscode/launch.json
+/DataIngestionIntoAzureNoSQL/.vscode/extensions.json
