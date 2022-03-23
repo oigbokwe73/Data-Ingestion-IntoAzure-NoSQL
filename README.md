@@ -1,7 +1,7 @@
 # Data-Ingestion IntoAzure-NoSQL
 
 ## Architecture Diagram 
-![image](https://user-images.githubusercontent.com/15838780/159802918-0cdabf47-23f7-4468-b507-f01cffac9375.png)
+![image](https://user-images.githubusercontent.com/15838780/159803055-8ee721bf-ca24-4bfb-92e9-aa8c4d51af20.png)
 
 
 ## Appplication Setting 
