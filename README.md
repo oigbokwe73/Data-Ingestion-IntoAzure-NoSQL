@@ -1,4 +1,4 @@
-# Data-Ingestion IntoAzure-NoSQL
+# Data-Ingestion Into Azure-NoSQL
 
 ## Architecture Diagram 
 ![image](https://user-images.githubusercontent.com/15838780/159803055-8ee721bf-ca24-4bfb-92e9-aa8c4d51af20.png)
