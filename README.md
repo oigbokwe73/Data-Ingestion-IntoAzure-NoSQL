@@ -29,7 +29,7 @@
 |43EFE991E8614CFB9EDECF1B0FDED37C.json| Search NOSQL Database for result set. Custom Mapping to result set.|
 |43EFE991E8614CFB9EDECF1B0FDED37D.json| Upload and shard into batch sizes.|
 |43EFE991E8614CFB9EDECF1B0FDED37E.json| Event triggered when file is written to container|
-|43EFE991E8614CFB9EDECF1B0FDED37F.json| Copy File(s) ffrom File share to contrainer. File is droppoed using SFTP|
+|43EFE991E8614CFB9EDECF1B0FDED37F.json| Copy File(s) from File share to contrainer. File is droppoed using SFTP|
 
 
 ## How to install ACI for SFTP
