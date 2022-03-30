@@ -26,7 +26,7 @@
 |43EFE991E8614CFB9EDECF1B0FDED37D.json| Upload and shard into batch sizes.|
 |43EFE991E8614CFB9EDECF1B0FDED37E.json| Event triggered when file is written to container|
 
-How to install ACI for SFTP
+## How to install ACI for SFTP
 https://docs.microsoft.com/en-us/samples/azure-samples/sftp-creation-template/sftp-on-azure
 
 ## Upload Configuration to Storage
