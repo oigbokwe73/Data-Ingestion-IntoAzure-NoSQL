@@ -45,7 +45,7 @@ namespace DataIngestionIntoAzureNoSQL
                 {
                     nvc.Add(item.Key, item.Value.FirstOrDefault());
                 });
-                return new ManagedOrchestratorService(nvc);
+                return new LocalOrchestratorService(nvc);
             }
         }
 

@@ -31,24 +31,17 @@
       "IsEnable": "true",
       "DataFlowProcessParameters": [
         {
+          "Key": "LocalTransformRequestPayload",
+          "Value": "yes"
+        },
+        {
           "Key": "messageformatin",
           "Value": "application/json"
         },
-        {
-          "Key": "StorageAccount",
-          "Value": "AzureWebJobsStorage"
-        },
-        {
-          "Key": "FolderName",
-          "Value": "config"
-        },
+        
         {
           "Key": "FileName",
           "Value": "FileTransformData.xsl"
-        },
-        {
-          "Key": "TransformPayload",
-          "Value": "yes"
         },
         {
           "Key": "messageformatout",
