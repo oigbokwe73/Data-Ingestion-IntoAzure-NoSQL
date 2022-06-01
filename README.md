@@ -16,6 +16,7 @@
 |ApiKeyName|[API KEY NAME]|Will be passed in the header  :  the file name of the config.
 |AppName| [APPLICATION NAME]| This is the name of the Function App. Used in log analytics|
 |StorageAcctName|[STORAGE ACCOUNT NAME]|Example  "AzureWebJobsStorage"|
+|TimerInterval|[TIMER_INTERVAL]|Example  "0 */1 * * * *" 1 MIN|
 
 ## Function App  Configuration 
 
@@ -28,6 +29,8 @@
 |43EFE991E8614CFB9EDECF1B0FDED37C.json| Search NOSQL Database for result set. Custom Mapping to result set.|
 |43EFE991E8614CFB9EDECF1B0FDED37D.json| Upload and shard into batch sizes.|
 |43EFE991E8614CFB9EDECF1B0FDED37E.json| Event triggered when file is written to container|
+|43EFE991E8614CFB9EDECF1B0FDED37F.json| Copy File(s) from File share to contrainer. File is droppoed using SFTP|
+
 
 ## How to install ACI for SFTP
 https://docs.microsoft.com/en-us/samples/azure-samples/sftp-creation-template/sftp-on-azure
