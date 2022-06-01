@@ -3,7 +3,6 @@
 ## Architecture Diagram 
 ![image](https://user-images.githubusercontent.com/15838780/159803055-8ee721bf-ca24-4bfb-92e9-aa8c4d51af20.png)
 
-![image](https://user-images.githubusercontent.com/15838780/160942550-b27f2971-2d8b-4b2b-a06d-acd044fbadd6.png)
 
 
 
@@ -55,9 +54,6 @@ Upload the selected files from the "**Config**" folder in your project
 |VsCode| https://visualstudio.microsoft.com/downloads/ |  Required extensions. Azure Functions, Azure Account
 |VS Studio Community Edition |https://visualstudio.microsoft.com/downloads/| Recommended. Nice intergration with Azure. software is free.
 
-## bug
-  
-if the  csv has "," in the payload will throw  a "column header error". Only use CSV's without  Commas(",") in the  
   
   
   ## Contact
