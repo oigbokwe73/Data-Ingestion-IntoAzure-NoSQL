@@ -18,7 +18,7 @@ namespace DataIngestionIntoAzureNoSQL
             log.LogInformation("C# blob trigger function processed a request.");
             NameValueCollection nvc = new NameValueCollection();
             nvc.Add(ApiKeyName, "43EFE991E8614CFB9EDECF1B0FDED37E");
-            IOrchrestatorService orchrestatorService = new ManagedOrchestratorService(nvc);
+            IOrchrestatorService orchrestatorService = new LocalOrchestratorService(nvc);
             var processFiles = orchrestatorService.Run(myBlob);
         }
     }

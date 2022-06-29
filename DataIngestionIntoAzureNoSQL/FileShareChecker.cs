@@ -28,7 +28,7 @@ namespace DataIngestionIntoAzureNoSQL
         {
             get
             {
-                return new ManagedOrchestratorService(nvc);
+                return new LocalOrchestratorService(nvc);
             }
         }
     }
