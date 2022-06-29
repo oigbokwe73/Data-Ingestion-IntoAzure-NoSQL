@@ -14,7 +14,7 @@
         <Table json:Array="true">No Records Found</Table>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:apply-templates select="@*|node()" />
+        <xsl:apply-templates select="@*|node()" /> 
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
