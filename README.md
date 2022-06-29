@@ -1,8 +1,6 @@
 # Data-Ingestion Into Azure-NoSQL
 
 ## Architecture Diagram 
-![image](https://user-images.githubusercontent.com/15838780/159803055-8ee721bf-ca24-4bfb-92e9-aa8c4d51af20.png)
-
 ![image](https://user-images.githubusercontent.com/15838780/160942550-b27f2971-2d8b-4b2b-a06d-acd044fbadd6.png)
 
 
@@ -63,4 +61,3 @@ if the  csv has "," in the payload will throw  a "column header error". Only use
   ## Contact
   
 For questions related to this project, can be reached via email :- support@xenhey.com
-
