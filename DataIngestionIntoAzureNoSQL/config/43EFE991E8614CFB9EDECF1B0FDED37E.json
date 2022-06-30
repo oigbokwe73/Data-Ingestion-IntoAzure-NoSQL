@@ -28,11 +28,11 @@
       "Key": "TransformCsvPayload",
       "Type": "Xenhey.BPM.Core.Processes.TransformationProcess",
       "Async": "false",
-      "IsEnable": "true",
+      "IsEnable": "false",
       "DataFlowProcessParameters": [
         {
           "Key": "messageformatin",
-          "Value": "application/json"
+          "Value": "application/xml"
         },
         {
           "Key": "StorageAccount",
@@ -47,7 +47,7 @@
           "Value": "FileTransformData.xsl"
         },
         {
-          "Key": "TransformPayload",
+          "Key": "LocalTransformRequestPayload",
           "Value": "yes"
         },
         {
@@ -57,26 +57,10 @@
       ]
     },
     {
-      "Key": "MessageBuilderProcess",
-      "Type": "Xenhey.BPM.Core.Processes.MessageBuilderProcess",
-      "Async": "false",
-      "IsEnable": "true",
-      "DataFlowProcessParameters": [
-        {
-          "Key": "BuildArrayMessageWithRootNode",
-          "Value": "Yes"
-        },
-        {
-          "Key": "RootName",
-          "Value": "Table"
-        }
-      ]
-    },
-    {
       "Key": "Write-Json-File-To-Storage",
       "Type": "Xenhey.BPM.Core.Processes.BlobStorageWriteProcess",
       "Async": "false",
-      "IsEnable": "false",
+      "IsEnable": "true",
       "DataFlowProcessParameters": [
         {
           "Key": "WriteToStorage",
@@ -88,11 +72,59 @@
         },
         {
           "Key": "container",
-          "Value": "BatchedFiles"
+          "Value": "batchedfiles"
         },
         {
           "Key": "folderName",
           "Value": "JsonFiles"
+        },
+        {
+          "Key": "ContentType",
+          "Value": "application/json"
+        },
+        {
+          "Key": "extension",
+          "Value": "json"
+        }
+      ]
+    },
+    {
+      "Key": "MessageBuilderProcess",
+      "Type": "Xenhey.BPM.Core.Processes.MessageBuilderProcess",
+      "Async": "false",
+      "IsEnable": "true",
+      "DataFlowProcessParameters": [
+        {
+          "Key": "BuildArrayFromComplexObject",
+          "Value": "Yes"
+        },
+        {
+          "Key": "TableName",
+          "Value": "Table1"
+        }
+      ]
+    },
+    {
+      "Key": "Write-Json-File-To-Storage",
+      "Type": "Xenhey.BPM.Core.Processes.BlobStorageWriteProcess",
+      "Async": "false",
+      "IsEnable": "true",
+      "DataFlowProcessParameters": [
+        {
+          "Key": "WriteToStorage",
+          "Value": "yes"
+        },
+        {
+          "Key": "BlobStorageConnectionString",
+          "Value": "AzureWebJobsStorage"
+        },
+        {
+          "Key": "container",
+          "Value": "batchedfiles"
+        },
+        {
+          "Key": "folderName",
+          "Value": "JsonFilesv1"
         },
         {
           "Key": "ContentType",
@@ -116,7 +148,7 @@
         },
         {
           "Key": "BatchSize",
-          "Value": "100"
+          "Value": "10"
         },
         {
           "Key": "StorageAccount",
