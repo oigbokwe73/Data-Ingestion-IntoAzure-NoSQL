@@ -16,7 +16,6 @@
 |ApiKeyName|[API KEY NAME]|Will be passed in the header  :  the file name of the config.
 |AppName| [APPLICATION NAME]| This is the name of the Function App. Used in log analytics|
 |StorageAcctName|[STORAGE ACCOUNT NAME]|Example  "AzureWebJobsStorage"|
-|TimerInterval|[TIMER_INTERVAL]|Example  "0 */1 * * * *" 1 MIN|
 
 ## Function App  Configuration 
 
