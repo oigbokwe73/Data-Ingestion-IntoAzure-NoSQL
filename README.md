@@ -36,7 +36,7 @@ https://docs.microsoft.com/en-us/samples/azure-samples/sftp-creation-template/sf
 
 
   
-  ## Products
+## Products
 
 |products|links|Comments|
 |:----|:----|:----|
@@ -46,11 +46,7 @@ https://docs.microsoft.com/en-us/samples/azure-samples/sftp-creation-template/sf
 |VsCode| https://visualstudio.microsoft.com/downloads/ |  Required extensions. Azure Functions, Azure Account
 |VS Studio Community Edition |https://visualstudio.microsoft.com/downloads/| Recommended. Nice intergration with Azure. software is free.
 
-## bug
-  
-if the  csv has "," in the payload will throw  a "column header error". Only use CSV's without  Commas(",") in the  
-  
-  
-  ## Contact
+
+## Contact
   
 For questions related to this project, can be reached via email :- support@xenhey.com
