@@ -1,7 +1,8 @@
 # Data-Ingestion Into Azure-NoSQL
 
 ## Architecture Diagram 
-![image](https://user-images.githubusercontent.com/15838780/160942550-b27f2971-2d8b-4b2b-a06d-acd044fbadd6.png)
+![image](![image](https://github.com/oigbokwe73/Data-Ingestion-IntoAzure-NoSQL/assets/15838780/6d8b0486-3533-465d-8355-e2e26967b664)
+)
 
 
 
@@ -33,14 +34,6 @@
 ## How to install ACI for SFTP
 https://docs.microsoft.com/en-us/samples/azure-samples/sftp-creation-template/sftp-on-azure
 
-## Upload Configuration to Storage
-Go to created storage Account.. Click On "Blob Service" 
-![image](https://user-images.githubusercontent.com/15838780/147958072-4a6058d2-d320-44a0-9d11-58449d527cd3.png)
-
-Click on **"Container"**
-![image](https://user-images.githubusercontent.com/15838780/147958201-71df0f21-e4e8-46c0-93be-728f1dbc2a43.png)
-![image](https://user-images.githubusercontent.com/15838780/147963170-1a2f2a64-7ba2-44ce-9f5d-30d490529711.png)
-Upload the selected files from the "**Config**" folder in your project
 
   
   ## Products
