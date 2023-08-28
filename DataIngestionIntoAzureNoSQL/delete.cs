@@ -1,24 +1,22 @@
-using System;
-using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using Xenhey.BPM.Core.Implementation;
-using Xenhey.BPM.Core;
 using System.Collections.Specialized;
 using System.Linq;
+using System.IO;
+using Xenhey.BPM.Core.Net6.Implementation;
+using Xenhey.BPM.Core.Net6;
 
-namespace DataIngestionIntoAzureNoSQL
+namespace AzureServiceBusToSQL
 {
-    public class message
+    public class delete
     {
         private HttpRequest _req;
         private NameValueCollection nvc = new NameValueCollection();
-        [FunctionName("message")]
+        [FunctionName("delete")]
         public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)]
             HttpRequest req, ILogger log)
         {
@@ -26,6 +24,7 @@ namespace DataIngestionIntoAzureNoSQL
 
             log.LogInformation("C# HTTP trigger function processed a request.");
             string requestBody = await new StreamReader(_req.Body).ReadToEndAsync();
+            _req.Headers.ToList().ForEach(item => { nvc.Add(item.Key, item.Value.FirstOrDefault()); });
             var results = orchrestatorService.Run(requestBody);
             return resultSet(results);
 
@@ -34,21 +33,16 @@ namespace DataIngestionIntoAzureNoSQL
         private ActionResult resultSet(string reponsePayload)
         {
             var returnContent = new ContentResult();
-            var mediaSelectedtype = _req.Headers.Where(x => x.Key.Equals("Content-Type")).FirstOrDefault();
+            var mediaSelectedtype = nvc.Get("Content-Type");
             returnContent.Content = reponsePayload;
-            returnContent.ContentType = mediaSelectedtype.Value;
+            returnContent.ContentType = mediaSelectedtype;
             return returnContent;
         }
-        private IOrchrestatorService orchrestatorService
+        private IOrchestrationService orchrestatorService
         {
             get
             {
-
-                _req.Headers.ToList().ForEach(item =>
-                {
-                    nvc.Add(item.Key, item.Value.FirstOrDefault());
-                });
-                return new LocalOrchestratorService(nvc);
+                return new ManagedOrchestratorService(nvc);
             }
         }
 

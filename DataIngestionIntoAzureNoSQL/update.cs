@@ -6,24 +6,26 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Collections.Specialized;
 using System.Linq;
+using System.IO;
 using Xenhey.BPM.Core.Net6.Implementation;
 using Xenhey.BPM.Core.Net6;
 
-namespace DataIngestionIntoAzureNoSQL
+namespace AzureServiceBusToSQL
 {
-    public class UploadFile
+    public class update
     {
         private HttpRequest _req;
         private NameValueCollection nvc = new NameValueCollection();
-        [FunctionName("UploadFile")]
+        [FunctionName("update")]
         public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)]
             HttpRequest req, ILogger log)
         {
             _req = req;
 
             log.LogInformation("C# HTTP trigger function processed a request.");
+            string requestBody = await new StreamReader(_req.Body).ReadToEndAsync();
             _req.Headers.ToList().ForEach(item => { nvc.Add(item.Key, item.Value.FirstOrDefault()); });
-            var results = orchrestatorService.Run(_req.Body);
+            var results = orchrestatorService.Run(requestBody);
             return resultSet(results);
 
         }
@@ -40,7 +42,6 @@ namespace DataIngestionIntoAzureNoSQL
         {
             get
             {
-
                 return new ManagedOrchestratorService(nvc);
             }
         }

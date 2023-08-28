@@ -3,14 +3,14 @@
   "LineOfBusinessProcessData": [
     {
       "Key": "object",
-      "Type": "Xenhey.BPM.Core.Processes.ProcessData"
+      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.ProcessData"
     }
   ],
   "Type": "",
   "DataFlowProcess": [
     {
       "Key": "Read-Single-Batched-File",
-      "Type": "Xenhey.BPM.Core.Processes.CSVProcess",
+      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.CSVProcess",
       "Async": "false",
       "IsEnable": "true",
       "DataFlowProcessParameters": [
@@ -26,7 +26,7 @@
     },
     {
       "Key": "Write-Json-File-To-Storage",
-      "Type": "Xenhey.BPM.Core.Processes.BlobStorageWriteProcess",
+      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.BlobStorageWriteProcess",
       "Async": "false",
       "IsEnable": "true",
       "DataFlowProcessParameters": [
@@ -58,7 +58,7 @@
     },
     {
       "Key": "MessageBuilderProcess",
-      "Type": "Xenhey.BPM.Core.Processes.MessageBuilderProcess",
+      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.MessageBuilderProcess",
       "Async": "false",
       "IsEnable": "true",
       "DataFlowProcessParameters": [
@@ -74,7 +74,7 @@
     },
     {
       "Key": "Write-Json-File-To-Storage",
-      "Type": "Xenhey.BPM.Core.Processes.BlobStorageWriteProcess",
+      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.BlobStorageWriteProcess",
       "Async": "false",
       "IsEnable": "true",
       "DataFlowProcessParameters": [
@@ -106,7 +106,7 @@
     },
     {
       "Key": "Write-To-Table-Storage",
-      "Type": "Xenhey.BPM.Core.Processes.AzureTableStorageProcess",
+      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.AzureTableStorageProcess",
       "Async": "false",
       "IsEnable": "true",
       "DataFlowProcessParameters": [
