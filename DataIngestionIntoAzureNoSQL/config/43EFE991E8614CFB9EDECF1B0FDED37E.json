@@ -25,38 +25,6 @@
       ]
     },
     {
-      "Key": "TransformCsvPayload",
-      "Type": "Xenhey.BPM.Core.Processes.TransformationProcess",
-      "Async": "false",
-      "IsEnable": "false",
-      "DataFlowProcessParameters": [
-        {
-          "Key": "messageformatin",
-          "Value": "application/xml"
-        },
-        {
-          "Key": "StorageAccount",
-          "Value": "AzureWebJobsStorage"
-        },
-        {
-          "Key": "FolderName",
-          "Value": "config"
-        },
-        {
-          "Key": "FileName",
-          "Value": "FileTransformData.xsl"
-        },
-        {
-          "Key": "LocalTransformRequestPayload",
-          "Value": "yes"
-        },
-        {
-          "Key": "messageformatout",
-          "Value": "application/json"
-        }
-      ]
-    },
-    {
       "Key": "Write-Json-File-To-Storage",
       "Type": "Xenhey.BPM.Core.Processes.BlobStorageWriteProcess",
       "Async": "false",
@@ -148,7 +116,7 @@
         },
         {
           "Key": "BatchSize",
-          "Value": "10"
+          "Value": "100"
         },
         {
           "Key": "StorageAccount",
@@ -156,7 +124,7 @@
         },
         {
           "Key": "TableName",
-          "Value": "training20220629"
+          "Value": "training20220706"
         }
       ]
     }

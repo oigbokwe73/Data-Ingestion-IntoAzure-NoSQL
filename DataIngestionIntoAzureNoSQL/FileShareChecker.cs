@@ -21,7 +21,7 @@ namespace DataIngestionIntoAzureNoSQL
             nvc.Add(ApiKeyName, "43EFE991E8614CFB9EDECF1B0FDED37F");
             string requestBody = "{\"ProcessStarted\" : \"Yes\" }";
             var uploadFile = orchrestatorService.Run(requestBody);
-            log.LogInformation(uploadFile);
+            //log.LogInformation(uploadFile);
         }
 
         private IOrchrestatorService orchrestatorService

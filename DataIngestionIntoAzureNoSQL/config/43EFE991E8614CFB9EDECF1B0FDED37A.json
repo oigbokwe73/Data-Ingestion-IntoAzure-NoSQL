@@ -25,31 +25,6 @@
       ]
     },
     {
-      "Key": "TransformCsvPayload",
-      "Type": "Xenhey.BPM.Core.Processes.TransformationProcess",
-      "Async": "false",
-      "IsEnable": "true",
-      "DataFlowProcessParameters": [
-        {
-          "Key": "LocalTransformRequestPayload",
-          "Value": "yes"
-        },
-        {
-          "Key": "messageformatin",
-          "Value": "application/json"
-        },
-        
-        {
-          "Key": "FileName",
-          "Value": "FileTransformData.xsl"
-        },
-        {
-          "Key": "messageformatout",
-          "Value": "application/json"
-        }
-      ]
-    },
-    {
       "Key": "MessageBuilderProcess",
       "Type": "Xenhey.BPM.Core.Processes.MessageBuilderProcess",
       "Async": "false",
@@ -85,7 +60,7 @@
         },
         {
           "Key": "TableName",
-          "Value": "training20220629"
+          "Value": "training20220727"
         }
       ]
     }
