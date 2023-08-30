@@ -1,7 +1,9 @@
 # Data-Ingestion Into Azure-NoSQL
 
 ## Architecture Diagram 
-![image](https://user-images.githubusercontent.com/15838780/160942550-b27f2971-2d8b-4b2b-a06d-acd044fbadd6.png)
+![image](https://github.com/oigbokwe73/Data-Ingestion-IntoAzure-NoSQL/assets/15838780/930e7fd4-c6da-41e0-bfd6-7560e4fcd862)
+
+
 
 
 
@@ -14,7 +16,6 @@
 |ApiKeyName|[API KEY NAME]|Will be passed in the header  :  the file name of the config.
 |AppName| [APPLICATION NAME]| This is the name of the Function App. Used in log analytics|
 |StorageAcctName|[STORAGE ACCOUNT NAME]|Example  "AzureWebJobsStorage"|
-|TimerInterval|[TIMER_INTERVAL]|Example  "0 */1 * * * *" 1 MIN|
 
 ## Function App  Configuration 
 
@@ -33,17 +34,9 @@
 ## How to install ACI for SFTP
 https://docs.microsoft.com/en-us/samples/azure-samples/sftp-creation-template/sftp-on-azure
 
-## Upload Configuration to Storage
-Go to created storage Account.. Click On "Blob Service" 
-![image](https://user-images.githubusercontent.com/15838780/147958072-4a6058d2-d320-44a0-9d11-58449d527cd3.png)
-
-Click on **"Container"**
-![image](https://user-images.githubusercontent.com/15838780/147958201-71df0f21-e4e8-46c0-93be-728f1dbc2a43.png)
-![image](https://user-images.githubusercontent.com/15838780/147963170-1a2f2a64-7ba2-44ce-9f5d-30d490529711.png)
-Upload the selected files from the "**Config**" folder in your project
 
   
-  ## Products
+## Products
 
 |products|links|Comments|
 |:----|:----|:----|
@@ -53,11 +46,7 @@ Upload the selected files from the "**Config**" folder in your project
 |VsCode| https://visualstudio.microsoft.com/downloads/ |  Required extensions. Azure Functions, Azure Account
 |VS Studio Community Edition |https://visualstudio.microsoft.com/downloads/| Recommended. Nice intergration with Azure. software is free.
 
-## bug
-  
-if the  csv has "," in the payload will throw  a "column header error". Only use CSV's without  Commas(",") in the  
-  
-  
-  ## Contact
+
+## Contact
   
 For questions related to this project, can be reached via email :- support@xenhey.com
