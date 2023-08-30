@@ -3,14 +3,30 @@
   "LineOfBusinessProcessData": [
     {
       "Key": "object",
-      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.ProcessData"
+      "Type": "Xenhey.BPM.Core.Net6.Processes.ProcessData"
     }
   ],
   "Type": "",
   "DataFlowProcess": [
     {
-      "Key": "CreateCSVBatchFilesForProcessing",
-      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.CSVProcess",
+      "Key": "ReadJsonAsStream",
+      "Type": "Xenhey.BPM.Core.Net6.Processes.MessageBuilderProcess",
+      "Async": "false",
+      "IsEnable": "true",
+      "DataFlowProcessParameters": [
+        {
+          "Key": "ReadJsonAsStream",
+          "Value": "yes"
+        },
+        {
+          "Key": "messageformat",
+          "Value": "application/json"
+        }
+      ]
+    },
+    {
+      "Key": "WriteBatchToNoSqlDb",
+      "Type": "Xenhey.BPM.Core.Net6.Processes.AzureTableStorageProcess",
       "Async": "false",
       "IsEnable": "true",
       "DataFlowProcessParameters": [
@@ -19,7 +35,7 @@
           "Value": "AzureWebJobsStorage"
         },
         {
-          "Key": "WriteCsvToStorageAsBatch",
+          "Key": "CreateRecordForAzureTableBatch",
           "Value": "Yes"
         },
         {
@@ -28,27 +44,11 @@
         },
         {
           "Key": "BatchSize",
-          "Value": "1001"
-        },
-        {
-          "Key": "FolderName",
-          "Value": "CSVFiles"
+          "Value": "100"
         },
         {
           "Key": "TableName",
-          "Value": "csvbatchfiles"
-        },
-        {
-          "Key": "Container",
-          "Value": "processed"
-        },
-        {
-          "Key": "FileExtension",
-          "Value": ".csv"
-        },
-        {
-          "Key": "ContentType",
-          "Value": "csv/text"
+          "Value": "training20220727"
         }
       ]
     }
