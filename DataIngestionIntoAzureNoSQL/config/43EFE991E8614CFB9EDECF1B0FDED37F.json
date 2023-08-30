@@ -1,5 +1,5 @@
 ﻿{
-  "Id": "CopyFilesAndCreateBatchFiles",
+  "Id": "UpdateRecordInNoSQLDb",
   "LineOfBusinessProcessData": [
     {
       "Key": "object",
@@ -9,62 +9,34 @@
   "Type": "",
   "DataFlowProcess": [
     {
-      "Key": "FileShareCopyProcess",
-      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.FileShareCopyProcess",
+      "Key": "Azure_Table_Storage",
+      "Type": "Xenhey.BPM.Core.Net6.Processes.AzureTableStorageProcess",
       "Async": "false",
       "IsEnable": "true",
       "DataFlowProcessParameters": [
         {
-          "Key": "StorageAccount",
-          "Value": "AzureWebJobsStorage"
-        },
-        {
-          "Key": "DownloadFileFromShare",
-          "Value": "Yes"
-        },
-        {
-          "Key": "FileExtension",
-          "Value": ".csv"
-        },
-        {
-          "Key": "IncludeFolderName",
+          "Key": "UpdateRecordInTableStore",
           "Value": "yes"
         },
         {
-          "Key": "FileShareName",
-          "Value": "training20220706"
+          "Key": "TableName",
+          "Value": "training20220727"
         },
-        {
-          "Key": "Container",
-          "Value": "pickup"
-        },
-        {
-          "Key": "FolderName",
-          "Value": "ForProcessing"
-        },
-        {
-          "Key": "ContentType",
-          "Value": "text/csv"
-        }
-      ]
-    },
-    {
-      "Key": "FileShareCopyProcess",
-      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.FileShareCopyProcess",
-      "Async": "false",
-      "IsEnable": "true",
-      "DataFlowProcessParameters": [
         {
           "Key": "StorageAccount",
           "Value": "AzureWebJobsStorage"
         },
         {
-          "Key": "DeleteFileFromShare",
-          "Value": "Yes"
+          "Key": "statement",
+          "Value": "RowKey eq '@{RowKey}'"
         },
         {
-          "Key": "FileShareName",
-          "Value": "training20220706"
+          "Key": "PrimaryKey",
+          "Value": "RowKey"
+        },
+        {
+          "Key": "filters",
+          "Value": "[{\"Key\": \"@{RowKey}\",\"Value\": \"RowKey\"}]"
         }
       ]
     }

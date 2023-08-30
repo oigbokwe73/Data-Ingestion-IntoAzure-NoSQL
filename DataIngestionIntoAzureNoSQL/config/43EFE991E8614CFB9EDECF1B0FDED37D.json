@@ -39,6 +39,10 @@
           "Value": "Yes"
         },
         {
+          "Key": "StoreInAzureTable",
+          "Value": "Yes"
+        },
+        {
           "Key": "BatchSize",
           "Value": "100"
         },

@@ -48,7 +48,7 @@
         },
         {
           "Key": "FilterProperty",
-          "Value": "[{\"Key\": \"EmailAddress\",\"Value\": \"Email\"},{\"Key\": \"ReferenceNo\",\"Value\": \"PartitionKey\"}]"
+          "Value": "[{\"Key\": \"CreditLimit\",\"Value\": \"creditLimit\"},{\"Key\": \"CurrentBalance\",\"Value\": \"currentBalance\"}]"
         }
       ]
     }

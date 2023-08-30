@@ -1,16 +1,16 @@
 ﻿{
-  "Id": "UploadFileProcess",
+  "Id": "CreateNewRecord",
   "LineOfBusinessProcessData": [
     {
       "Key": "object",
-      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.ProcessData"
+      "Type": "Xenhey.BPM.Core.Net6.Processes.ProcessData"
     }
   ],
   "Type": "",
   "DataFlowProcess": [
     {
-      "Key": "Write-To-Storage",
-      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.AzureTableStorageProcess",
+      "Key": "CreateNewRecordInNo SQLDb",
+      "Type": "Xenhey.BPM.Core.Net6.Processes.AzureTableStorageProcess",
       "Async": "false",
       "IsEnable": "true",
       "DataFlowProcessParameters": [
@@ -24,7 +24,7 @@
         },
         {
           "Key": "TableName",
-          "Value": "training20220706"
+          "Value": "training20220727"
         }
       ]
     }

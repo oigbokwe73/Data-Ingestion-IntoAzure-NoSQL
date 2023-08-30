@@ -1,5 +1,5 @@
 ﻿{
-  "Id": "UploadFileProcess",
+  "Id": "DeleteRecordFromNoSQLDB",
   "LineOfBusinessProcessData": [
     {
       "Key": "object",
@@ -9,122 +9,34 @@
   "Type": "",
   "DataFlowProcess": [
     {
-      "Key": "Read-Single-Batched-File",
-      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.CSVProcess",
+      "Key": "Azure_Table_Storage",
+      "Type": "Xenhey.BPM.Core.Net6.Processes.AzureTableStorageProcess",
       "Async": "false",
       "IsEnable": "true",
       "DataFlowProcessParameters": [
         {
-          "Key": "ReadCsvAsStreamv2",
+          "Key": "DeleteRecordsFromTableStore",
           "Value": "yes"
-        },
-        {
-          "Key": "messageformat",
-          "Value": "application/json"
-        }
-      ]
-    },
-    {
-      "Key": "Write-Json-File-To-Storage",
-      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.BlobStorageWriteProcess",
-      "Async": "false",
-      "IsEnable": "true",
-      "DataFlowProcessParameters": [
-        {
-          "Key": "WriteToStorage",
-          "Value": "yes"
-        },
-        {
-          "Key": "BlobStorageConnectionString",
-          "Value": "AzureWebJobsStorage"
-        },
-        {
-          "Key": "container",
-          "Value": "batchedfiles"
-        },
-        {
-          "Key": "folderName",
-          "Value": "JsonFiles"
-        },
-        {
-          "Key": "ContentType",
-          "Value": "application/json"
-        },
-        {
-          "Key": "extension",
-          "Value": "json"
-        }
-      ]
-    },
-    {
-      "Key": "MessageBuilderProcess",
-      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.MessageBuilderProcess",
-      "Async": "false",
-      "IsEnable": "true",
-      "DataFlowProcessParameters": [
-        {
-          "Key": "BuildArrayFromComplexObject",
-          "Value": "Yes"
         },
         {
           "Key": "TableName",
-          "Value": "Table1"
-        }
-      ]
-    },
-    {
-      "Key": "Write-Json-File-To-Storage",
-      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.BlobStorageWriteProcess",
-      "Async": "false",
-      "IsEnable": "true",
-      "DataFlowProcessParameters": [
-        {
-          "Key": "WriteToStorage",
-          "Value": "yes"
-        },
-        {
-          "Key": "BlobStorageConnectionString",
-          "Value": "AzureWebJobsStorage"
-        },
-        {
-          "Key": "container",
-          "Value": "batchedfiles"
-        },
-        {
-          "Key": "folderName",
-          "Value": "JsonFilesv1"
-        },
-        {
-          "Key": "ContentType",
-          "Value": "application/json"
-        },
-        {
-          "Key": "extension",
-          "Value": "json"
-        }
-      ]
-    },
-    {
-      "Key": "Write-To-Table-Storage",
-      "Type": "Xenhey.BPM.Core.Net6.Net6.Processes.AzureTableStorageProcess",
-      "Async": "false",
-      "IsEnable": "true",
-      "DataFlowProcessParameters": [
-        {
-          "Key": "CreateRecordForAzureTableBatch",
-          "Value": "yes"
-        },
-        {
-          "Key": "BatchSize",
-          "Value": "100"
+          "Value": "training20220727"
         },
         {
           "Key": "StorageAccount",
           "Value": "AzureWebJobsStorage"
         },
         {
-          "Key": "TableName",
-          "Value": "training20220706"
+          "Key": "statement",
+          "Value": "RowKey eq '@{RowKey}'"
+        },
+        {
+          "Key": "filters",
+          "Value": "[{\"Key\": \"@{RowKey}\",\"Value\": \"RowKey\"}]"
+        },
+        {
+          "Key": "batchsize",
+          "Value": "100"
         }
       ]
     }
