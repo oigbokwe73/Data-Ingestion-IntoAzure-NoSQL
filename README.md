@@ -32,10 +32,6 @@
 |43EFE991E8614CFB9EDECF1B0FDED37F.json| Update record in NoSQL database|
 
 
-## How to install ACI for SFTP
-https://docs.microsoft.com/en-us/samples/azure-samples/sftp-creation-template/sftp-on-azure
-
-
   
 ## Products
 
