@@ -6,7 +6,7 @@
 ## Video
 |Vidoes|Comment|
 |:----|:----|
-|[Session 8/30/2023](https://pbsdatastore.blob.core.windows.net/training/TrainingInfo/video1348817669.mp4?sp=r&st=2023-08-31T16:01:30Z&se=2024-09-01T00:01:30Z&spr=https&sv=2022-11-02&sr=b&sig=Axnb6zIJOLHi4L%2F0BOZt0Qc7lmj0T0Xv8y%2FXb6j8yok%3D)|[CONNECTION STRING]| Low Code No Code Meetup Session|
+|[Session 8/30/2023](https://pbsdatastore.blob.core.windows.net/training/TrainingInfo/video1348817669.mp4?sp=r&st=2023-08-31T16:01:30Z&se=2024-09-01T00:01:30Z&spr=https&sv=2022-11-02&sr=b&sig=Axnb6zIJOLHi4L%2F0BOZt0Qc7lmj0T0Xv8y%2FXb6j8yok%3D)| Low Code No Code Meetup Session|
 |[Low Code No Code](https://www.xenhey.com/api/GetFiling/614000248898)| Benefits of Low Code No Code|
 
 
