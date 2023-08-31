@@ -3,6 +3,12 @@
 ## Architecture Diagram 
 ![image](https://github.com/oigbokwe73/Data-Ingestion-IntoAzure-NoSQL/assets/15838780/ca75d3de-9b95-4a53-8780-d366f2cbb3e7)
 
+## Video
+|Vidoes|Comment|
+|:----|:----|
+|[Session 8/30/2023](https://pbsdatastore.blob.core.windows.net/training/TrainingInfo/video1348817669.mp4?sp=r&st=2023-08-31T16:01:30Z&se=2024-09-01T00:01:30Z&spr=https&sv=2022-11-02&sr=b&sig=Axnb6zIJOLHi4L%2F0BOZt0Qc7lmj0T0Xv8y%2FXb6j8yok%3D)| Low Code No Code Meetup Session|
+|[Low Code No Code](https://www.xenhey.com/api/GetFiling/614000248898)| Benefits of Low Code No Code|
+
 
 
 
@@ -43,6 +49,20 @@
 |VsCode| https://visualstudio.microsoft.com/downloads/ |  Required extensions. Azure Functions, Azure Account
 |VS Studio Community Edition |https://visualstudio.microsoft.com/downloads/| Recommended. Nice intergration with Azure. software is free.
 
+## Low code No Code
+1. **Accessibility**: LCNC platforms enable individuals without a deep technical background to develop applications. This democratizes the app development process, allowing a broader range of people to contribute.
+
+2. **Cost-Efficiency**: By reducing the need for specialized developers and speeding up the development process, businesses can save on development costs.
+
+3. **Scalability**: Many LCNC solutions are built on robust architectures that can scale with the growth of the business, ensuring that the applications remain performant as user numbers increase.
+
+4. **Innovation**: By lowering the barriers to app development, LCNC platforms can foster innovation. Teams can quickly test new ideas and iterate based on feedback without committing significant resources.
+
+5. **Maintenance**: LCNC platforms typically handle updates and maintenance, ensuring that applications remain up-to-date with the latest features and security patches.
+
+6. **Consistency**: With standardized components and templates, businesses can ensure a consistent user experience across different applications.
+
+10. **Empowerment**: LCNC solutions empower non-technical team members, such as business analysts and managers, to take a more active role in the digital transformation of their organizations.
 
 ## Contact
   
