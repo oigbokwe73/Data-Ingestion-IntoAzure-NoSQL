@@ -25,10 +25,78 @@
       ]
     },
     {
-      "Key": "WriteBatchToNoSqlDb",
-      "Type": "Xenhey.BPM.Core.Net6.Processes.AzureTableStorageProcess",
+      "Key": "MessageBuilderProcess",
+      "Type": "Xenhey.BPM.Core.Net6.Processes.MessageBuilderProcess",
+      "Async": "false",
+      "IsEnable": "false",
+      "DataFlowProcessParameters": [
+        {
+          "Key": "ConvertJsonToXml",
+          "Value": "Yes"
+        },
+        {
+          "Key": "messageformat",
+          "Value": "application/xml"
+        },
+        {
+          "Key": "RootElement",
+          "Value": "CardTransactions"
+        }
+      ]
+    },
+    {
+      "Key": "WriteToBlobContainer",
+      "Type": "Xenhey.BPM.Core.Net6.Processes.BlobStorageProcess",
       "Async": "false",
       "IsEnable": "true",
+      "DataFlowProcessParameters": [
+        {
+          "Key": "WriteToStorage",
+          "Value": "Yes"
+        },
+        {
+          "Key": "BlobStorageConnectionString",
+          "Value": "AzureWebJobsStorage"
+        },
+        {
+          "Key": "container",
+          "Value": "training20230830"
+        },
+        {
+          "Key": "folderName",
+          "Value": "session1"
+        },
+        {
+          "Key": "ContentType",
+          "Value": "application/json"
+        },
+        {
+          "Key": "extension",
+          "Value": "xml"
+        }
+      ]
+    },
+    {
+      "Key": "UpdateContentType",
+      "Type": "Xenhey.BPM.Core.Net6.Processes.HeaderInfoProcess",
+      "Async": "false",
+      "IsEnable": "false",
+      "DataFlowProcessParameters": [
+        {
+          "Key": "ReplaceHeaders",
+          "Value": "Yes"
+        },
+        {
+          "Key": "Headers",
+          "Value": "[{\"Key\": \"Content-Type\",\"Value\": \"application/xml\"}]"
+        }
+      ]
+    },
+    {
+      "Key": "WriteToTableStorage",
+      "Type": "Xenhey.BPM.Core.Net6.Processes.AzureTableStorageProcess",
+      "Async": "false",
+      "IsEnable": "false",
       "DataFlowProcessParameters": [
         {
           "Key": "StorageAccount",
@@ -48,7 +116,7 @@
         },
         {
           "Key": "TableName",
-          "Value": "training20220727"
+          "Value": "training20230830"
         }
       ]
     }
