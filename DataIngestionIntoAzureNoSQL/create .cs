@@ -10,7 +10,7 @@ using System.IO;
 using Xenhey.BPM.Core.Net6.Implementation;
 using Xenhey.BPM.Core.Net6;
 
-namespace AzureServiceBusToSQL
+namespace DataIngestionIntoAzureNoSQL
 {
     public class create
     {
