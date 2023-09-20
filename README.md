@@ -24,6 +24,16 @@
 |AppName| [APPLICATION NAME]| This is the name of the Function App. Used in log analytics|
 |StorageAcctName|[STORAGE ACCOUNT NAME]|Example  "AzureWebJobsStorage"|
 
+|ContainerName|Description|
+|:----|:----|
+|config|Location for the configuration files|
+
+|Table|Description|
+|:----|:----|
+|csvbatchfiles|Track the CSV parsed files|
+|training[YYYYMMDD]|N0 SQL DataStore|
+
+
 ## Function App  Configuration 
 
 > **Note:** The **Configuration** is located in the  FunctionApp  in a **Config** Folder.
