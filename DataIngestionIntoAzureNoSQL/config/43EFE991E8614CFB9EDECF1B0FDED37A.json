@@ -28,7 +28,7 @@
       "Key": "MessageBuilderProcess",
       "Type": "Xenhey.BPM.Core.Net6.Processes.MessageBuilderProcess",
       "Async": "false",
-      "IsEnable": "true",
+      "IsEnable": "false",
       "DataFlowProcessParameters": [
         {
           "Key": "BuildArrayMessageWithRootNode",
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "Key": "Write-To-Storage",
+      "Key": "WriteRecordsToTableStorage",
       "Type": "Xenhey.BPM.Core.Net6.Processes.AzureTableStorageProcess",
       "Async": "false",
       "IsEnable": "true",
@@ -60,7 +60,7 @@
         },
         {
           "Key": "TableName",
-          "Value": "training20220727"
+          "Value": "training20230920"
         }
       ]
     }
