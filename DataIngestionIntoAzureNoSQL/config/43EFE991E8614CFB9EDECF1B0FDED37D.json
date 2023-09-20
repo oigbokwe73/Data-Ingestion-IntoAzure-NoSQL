@@ -60,11 +60,11 @@
         },
         {
           "Key": "container",
-          "Value": "training20230830"
+          "Value": "training20230920"
         },
         {
           "Key": "folderName",
-          "Value": "session1"
+          "Value": "datainput"
         },
         {
           "Key": "ContentType",
@@ -72,7 +72,7 @@
         },
         {
           "Key": "extension",
-          "Value": "xml"
+          "Value": "json"
         }
       ]
     },
