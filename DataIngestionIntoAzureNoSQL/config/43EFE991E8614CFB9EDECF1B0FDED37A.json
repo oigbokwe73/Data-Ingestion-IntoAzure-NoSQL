@@ -1,4 +1,4 @@
-﻿{
+{
   "Id": "UploadFileProcess",
   "LineOfBusinessProcessData": [
     {
@@ -15,28 +15,12 @@
       "IsEnable": "true",
       "DataFlowProcessParameters": [
         {
-          "Key": "ReadCsvAsStreamv2",
+          "Key": "GetRecordsFromCSV",
           "Value": "yes"
         },
         {
           "Key": "messageformat",
           "Value": "application/json"
-        }
-      ]
-    },
-    {
-      "Key": "MessageBuilderProcess",
-      "Type": "Xenhey.BPM.Core.Net6.Processes.MessageBuilderProcess",
-      "Async": "false",
-      "IsEnable": "false",
-      "DataFlowProcessParameters": [
-        {
-          "Key": "BuildArrayMessageWithRootNode",
-          "Value": "Yes"
-        },
-        {
-          "Key": "RootName",
-          "Value": "Table"
         }
       ]
     },
